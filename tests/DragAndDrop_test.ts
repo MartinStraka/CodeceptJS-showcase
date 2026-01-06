@@ -2,9 +2,10 @@ import dragAndDropPage from "../pages/DragAndDropPage";
 
 const { I } = inject();
 
+// Showcase test: Simple drag and drop
 Feature("Drag and drop items");
 
-Scenario("open my website", () => {
+Scenario("Open tested website", () => {
   I.amOnPage("https://www.learnaqa.info/drag-and-drop/");
 });
 

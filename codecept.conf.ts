@@ -47,11 +47,6 @@ export const config: CodeceptJS.MainConfig = {
       enabled: false,
       deleteSuccessful: false,
     },
-    /*
-        tryTo: {
-            enabled: true,
-        },
-        */
   },
   name: "codeceptjs"
 };

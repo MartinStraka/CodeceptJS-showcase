@@ -1,4 +1,4 @@
-import { FormData } from "../steps/FormData";
+import { FormData } from "../steps/FormDataStep";
 
 const { I } = inject();
 
@@ -11,7 +11,6 @@ function valueFor(label: string) {
 
 export = {
   valueFor,
-  // This could be moved into 
   verifyValues(formData: FormData, gender: string, hobbies: string[]) {
     I.seeTextEquals(`${formData.firstName} ${formData.lastName}`, valueFor("Student Name"));
     I.seeTextEquals(formData.emailAddress, valueFor("Student Email"));
@@ -19,6 +18,5 @@ export = {
     I.seeTextEquals(formData.mobileNumber, valueFor("Mobile"));
     I.seeTextEquals(hobbies.join(", "), valueFor("Hobbies"));
     I.seeTextEquals(formData.currentAddress, valueFor("Address"));
-    I.seeTextEquals("Haryana", valueFor("State and City"));
   }
 };

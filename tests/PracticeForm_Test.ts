@@ -3,7 +3,7 @@ import navbarFragment from "../fragments/NavbarFragment";
 import formRespondModalFragment from "../fragments/FormRespondModalFragment";
 import practiceFormPage from "../pages/PracticeFormPage";
 import modalFragment from "../fragments/ModalFragment";
-import { FormData, GenderLabels, HobbyLabels } from "../steps/FormData";
+import { FormData, GenderLabels, HobbyLabels } from "../steps/FormDataStep";
 
 const { I } = inject();
 
@@ -59,6 +59,7 @@ Scenario("Verify the submitted data", () => {
 
     // Known issue: if only State is selected (no City),
     // the application does not show the value in the summary
+    I.say("Next step fails because of a bug in the application");
     I.seeTextEquals("Haryana", formRespondModalFragment.valueFor("State and City"));
     // State is asserted in the test (not in the fragment) because
     // it depends on a scenario-specific UI interaction rather than form data

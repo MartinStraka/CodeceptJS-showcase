@@ -1,0 +1,12 @@
+diff --git a/node_modules/codeceptjs/lib/plugin/retryFailedStep.js b/node_modules/codeceptjs/lib/plugin/retryFailedStep.js
+index 6d43bf8..30d321b 100644
+--- a/node_modules/codeceptjs/lib/plugin/retryFailedStep.js
++++ b/node_modules/codeceptjs/lib/plugin/retryFailedStep.js
+@@ -83,7 +83,6 @@ module.exports = config => {
+ 
+   const when = err => {
+     if (!enableRetry) return
+-    if (store.debugMode) return false
+     if (!store.autoRetries) return false
+     if (customWhen) return customWhen(err)
+     return true

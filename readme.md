@@ -48,3 +48,7 @@ End-to-end tests written in **CodeceptJS** using **Playwright** and **Typescript
         npx codeceptjs run ./tests/<test_name> --verbose
 
 Currently, tests are verified on Chromium only.
+
+### TODO: 
+1. Mochawesome reporting
+![report](reportHtmlExample.png)

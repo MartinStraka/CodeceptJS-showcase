@@ -3,6 +3,7 @@ export = {
     return locate(`#item-${position}`);
   },
 
+  draggableItems: locate("div[draggable='true']"),
   dropZone: locate("#drop-zone"),
 
 };
